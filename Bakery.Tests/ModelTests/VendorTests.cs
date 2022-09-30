@@ -41,5 +41,14 @@ namespace Bakery.Tests
     Assert.AreNotEqual(vendorOne, vendorTwo);
   }
 
+    [TestMethod]
+  public void AssignId_AssignAndCheckVendorId_Int()
+  {
+    string name = "Lenny's Bakery";
+    Vendor newVendor = new Vendor(name);
+    int result = newVendor.Id;
+    Assert.AreEqual(result, newVendor.Id);
+  }
+
   }
 }
