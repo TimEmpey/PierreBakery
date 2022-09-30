@@ -22,7 +22,14 @@ namespace Bakery.Tests
     Assert.AreEqual(typeof(Order), newOrder.GetType());
   }
 
-
+  [TestMethod]
+  public void OrderName_ReturnsOrdersName_String()
+  {
+    string Item = "Bread";
+    Order newOrder = new Order(Item);
+    string ItemCheck = newOrder.Item;
+    Assert.AreEqual(ItemCheck, Item);
+  }
 
   }
 }
