@@ -23,7 +23,7 @@ namespace Bakery.Tests
   }
 
   [TestMethod]
-  public void OrderName_ReturnsOrdersName_String()
+  public void OrderItem_ReturnsOrdersItem_String()
   {
     string Item = "Bread";
     string Amount = "10 loafs";
@@ -32,6 +32,42 @@ namespace Bakery.Tests
     Order newOrder = new Order(Item, Amount, Price, Date);
     string ItemCheck = newOrder.Item;
     Assert.AreEqual(ItemCheck, Item);
+  }
+
+  [TestMethod]
+  public void OrderAmount_ReturnsOrdersAmount_String()
+  {
+    string Item = "Bread";
+    string Amount = "10 loafs";
+    string Price = "$50";
+    string Date = "Sep 12, 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    string amountCheck = newOrder.Amount;
+    Assert.AreEqual(amountCheck, Amount);
+  }
+
+  [TestMethod]
+  public void OrderPrice_ReturnsOrdersName_String()
+  {
+    string Item = "Bread";
+    string Amount = "10 loafs";
+    string Price = "$50";
+    string Date = "Sep 12, 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    string priceCheck = newOrder.Price;
+    Assert.AreEqual(priceCheck, Price);
+  }
+
+  [TestMethod]
+  public void OrderDate_ReturnsOrdersName_String()
+  {
+    string Item = "Bread";
+    string Amount = "10 loafs";
+    string Price = "$50";
+    string Date = "Sep 12, 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    string dateCheck = newOrder.Date;
+    Assert.AreEqual(dateCheck, Date);
   }
 
     [TestMethod]
