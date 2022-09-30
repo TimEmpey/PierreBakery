@@ -31,5 +31,15 @@ namespace Bakery.Tests
     Assert.AreEqual(ItemCheck, Item);
   }
 
+    [TestMethod]
+  public void OrderConstructor_SaveMultipleOrdersAndReturnOne_String()
+  {
+    string itemOne = "Bread";
+    String itemTwo = "Croissants";
+    Order orderOne = new Order(itemOne);
+    Order orderTwo = new Order (itemTwo);
+    Assert.AreNotEqual(orderOne, orderTwo);
+  }
+
   }
 }
