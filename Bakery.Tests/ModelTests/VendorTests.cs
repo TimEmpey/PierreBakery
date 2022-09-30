@@ -26,20 +26,20 @@ namespace Bakery.Tests
   public void VendorName_ReturnsVendorsName_String()
   {
     string name = "Lenny's Bakery";
-    string description = "Corner of 24th and Jefferson";
-    Vendor newVendor = new Vendor(name, description);
+    string location = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, location);
     string nameCheck = newVendor.Name;
     Assert.AreEqual(nameCheck, name);
   }
 
   [TestMethod]
-  public void VendorDescription_ReturnsVendorsDescription_String()
+  public void VendorLocation_ReturnsVendorsLocation_String()
   {
     string name = "Lenny's Bakery";
-    string description = "Corner of 24th and Jefferson";
-    Vendor newVendor = new Vendor(name, description);
-    string descriptionCheck = newVendor.Description;
-    Assert.AreEqual(descriptionCheck, description);
+    string location = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, location);
+    string locationCheck = newVendor.Location;
+    Assert.AreEqual(locationCheck, location);
   }
 
   [TestMethod]
@@ -47,10 +47,10 @@ namespace Bakery.Tests
   {
     string nameOne = "Lenny's Bakery";
     string nameTwo = "Sues Cafe";
-    string descriptionOne = "Corner of 24th and Jefferson";
-    string descriptionTwo = "12th Ave";
-    Vendor vendorOne = new Vendor(nameOne, descriptionOne);
-    Vendor vendorTwo = new Vendor (nameTwo, descriptionTwo);
+    string locationOne = "Corner of 24th and Jefferson";
+    string locationTwo = "12th Ave";
+    Vendor vendorOne = new Vendor(nameOne, locationOne);
+    Vendor vendorTwo = new Vendor (nameTwo, locationTwo);
     Assert.AreNotEqual(vendorOne, vendorTwo);
   }
 
@@ -58,8 +58,8 @@ namespace Bakery.Tests
   public void AssignId_AssignAndCheckVendorId_Int()
   {
     string name = "Lenny's Bakery";
-    string description = "Corner of 24th and Jefferson";
-    Vendor newVendor = new Vendor(name, description);
+    string location = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, location);
     int result = newVendor.Id;
     Assert.AreEqual(result, newVendor.Id);
   }
@@ -68,11 +68,11 @@ namespace Bakery.Tests
   public void SearchId_VerifyIdsAreNotSame_Bool()
   {
     string name = "Lenny's Bakery";
-    string description = "Corner of 24th and Jefferson";
+    string location = "Corner of 24th and Jefferson";
     string nameTwo = "Jewl's Cafe";
-    string descriptionTwo = "192nd Ave";
-    Vendor newVendor = new Vendor(name, description);
-    Vendor newVendorTwo = new Vendor(nameTwo, descriptionTwo);
+    string locationTwo = "192nd Ave";
+    Vendor newVendor = new Vendor(name, location);
+    Vendor newVendorTwo = new Vendor(nameTwo, locationTwo);
     Assert.AreNotEqual(newVendorTwo.Id, newVendor.Id);
   }
 

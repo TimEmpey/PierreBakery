@@ -22,9 +22,9 @@ namespace Bakery.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName, string vendorDescription)
+    public ActionResult Create(string vendorName, string vendorLocation)
     {
-      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      Vendor newVendor = new Vendor(vendorName, vendorLocation);
       return RedirectToAction("Index");
     }
 
