@@ -12,10 +12,10 @@
       <h3>No vendors have been added yet!</h3>
     } 
 
-    @foreach (Artist artist in Model)
+    @foreach (Vendor vendor in Model)
     {
       <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
-      <li>@Views_Vendor_Index.Description</li>
+      <li>vendor.Description</li>
     }
     <h3><a href='/vendors/new'>Add a new vendor</a></h3>
   </body>

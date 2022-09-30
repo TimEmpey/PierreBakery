@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using System;
 using Microsoft.AspNetCore.Mvc;
 using Bakery.Models;
+using System.Collections.Generic;
 
 namespace Bakery.Controllers
 {
@@ -12,7 +11,7 @@ namespace Bakery.Controllers
     [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
-      Vendor vendor = vendor.Find(vendorId);
+      Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
     } 
 
