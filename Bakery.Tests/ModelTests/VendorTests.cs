@@ -31,7 +31,15 @@ namespace Bakery.Tests
     Assert.AreEqual(nameCheck, name);
   }
 
-  
+  [TestMethod]
+  public void VendorConstructor_SaveMultipleVendorsAndReturnOne_String()
+  {
+    string nameOne = "Lenny's Bakery";
+    String nameTwo = "Sues Cafe";
+    Vendor vendorOne = new Vendor(nameOne);
+    Vendor vendorTwo = new Vendor (nameTwo);
+    Assert.AreNotEqual(vendorOne, vendorTwo);
+  }
 
   }
 }
