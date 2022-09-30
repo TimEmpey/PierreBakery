@@ -18,7 +18,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void VendorConstructor_CreateInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("testing");
+      Vendor newVendor = new Vendor("testing", "testing");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
@@ -26,18 +26,31 @@ namespace Bakery.Tests
   public void VendorName_ReturnsVendorsName_String()
   {
     string name = "Lenny's Bakery";
-    Vendor newVendor = new Vendor(name);
+    string description = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, description);
     string nameCheck = newVendor.Name;
     Assert.AreEqual(nameCheck, name);
+  }
+
+  [TestMethod]
+  public void VendorDescription_ReturnsVendorsDescription_String()
+  {
+    string name = "Lenny's Bakery";
+    string description = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, description);
+    string descriptionCheck = newVendor.Description;
+    Assert.AreEqual(descriptionCheck, description);
   }
 
   [TestMethod]
   public void VendorConstructor_SaveMultipleVendorsAndReturnOne_String()
   {
     string nameOne = "Lenny's Bakery";
-    String nameTwo = "Sues Cafe";
-    Vendor vendorOne = new Vendor(nameOne);
-    Vendor vendorTwo = new Vendor (nameTwo);
+    string nameTwo = "Sues Cafe";
+    string descriptionOne = "Corner of 24th and Jefferson";
+    string descriptionTwo = "12th Ave";
+    Vendor vendorOne = new Vendor(nameOne, descriptionOne);
+    Vendor vendorTwo = new Vendor (nameTwo, descriptionTwo);
     Assert.AreNotEqual(vendorOne, vendorTwo);
   }
 
@@ -45,7 +58,8 @@ namespace Bakery.Tests
   public void AssignId_AssignAndCheckVendorId_Int()
   {
     string name = "Lenny's Bakery";
-    Vendor newVendor = new Vendor(name);
+    string description = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, description);
     int result = newVendor.Id;
     Assert.AreEqual(result, newVendor.Id);
   }

@@ -57,7 +57,8 @@ namespace Bakery.Tests
     Order newOrder = new Order(item);
     List<Order> newList = new List<Order> { newOrder };
     string name = "Lenny's Bakery";
-    Vendor newVendor = new Vendor(name);
+    string description = "Corner of 24th and Jefferson";
+    Vendor newVendor = new Vendor(name, description);
     newVendor.AddOrder(newOrder);
     List<Order> result = newVendor.Orders;
     CollectionAssert.AreEqual(newList, result);
