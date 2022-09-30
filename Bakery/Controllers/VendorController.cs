@@ -5,7 +5,6 @@ using Bakery.Models;
 
 namespace Bakery.Controllers
 {
-
   public class VendorController : Controller
   {
 

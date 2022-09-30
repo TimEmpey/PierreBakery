@@ -64,5 +64,17 @@ namespace Bakery.Tests
     Assert.AreEqual(result, newVendor.Id);
   }
 
+    [TestMethod]
+  public void SearchId_VerifyIdsAreNotSame_Bool()
+  {
+    string name = "Lenny's Bakery";
+    string description = "Corner of 24th and Jefferson";
+    string nameTwo = "Jewl's Cafe";
+    string descriptionTwo = "192nd Ave";
+    Vendor newVendor = new Vendor(name, description);
+    Vendor newVendorTwo = new Vendor(nameTwo, descriptionTwo);
+    Assert.AreNotEqual(newVendorTwo.Id, newVendor.Id);
+  }
+
   }
 }

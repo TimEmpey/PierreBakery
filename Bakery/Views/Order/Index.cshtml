@@ -8,20 +8,22 @@
   <body> 
     @using Bakery.Models;
 
-    <h1>Pierre Bakery - Vendor List</h1>
+    <h1>Pierre Bakery - Order List</h1>
 
 
     @if (@Model.Count == 0)
     {
-      <h3>No vendors have been added yet!</h3>
+      <h3>No orders have been added yet!</h3>
     } 
 
-    @foreach (Vendor vendor in Model)
+    @foreach (Order order in Model)
     {
-      <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
-      <li style="margin-left:2em">@vendor.Description</li>
+      <li>@order.Item</li>
+      <li style="margin-left:2em">@order.Amount</li>
+      <li style="margin-left:2em">@order.Price</li>
+      <li style="margin-left:2em">@order.Date</li>
     }
     <p><a href="/">Back home</a></p>
-    <h3><a href='/vendors/new'>Add a new vendor</a></h3>
+    <h3><a href='/vendors/'>Add a new vendor</a></h3>
   </body>
 </html>
