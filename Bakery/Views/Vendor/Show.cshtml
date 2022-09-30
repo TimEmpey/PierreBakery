@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <title>Vendor List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
   </head>
   <body>
     @using Bakery.Models;
     
     <h1>Pierre Bakery - Order List</h1>
-    <ol>
+
+    <ul>
     @foreach (Order order in @Model["orders"])
     {
-      <li>@order.Item</li>
-        <li style="margin-left:2em">@order.Amount</li>
-        <li style="margin-left:2em">@order.Price</li>
-        <li style="margin-left:2em">@order.Date</li>
+      <div class="listItem">
+        <li>@order.Item</li>
+          <li style="margin-left:2em">@order.Amount</li>
+          <li style="margin-left:2em">@order.Price</li>
+          <li style="margin-left:2em">@order.Date</li>
+      </div>
     }
-    </ol>
+    </ul>
     <h3><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h3>
     <h3><a href='/vendors'>View venders</a></h3>
   </body>
