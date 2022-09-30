@@ -10,6 +10,7 @@ namespace Bakery.Models
     public string Description { get; set; }
     public int Id { get; }
     public List <Order> Orders { get; set; } 
+
     public Vendor(string vendorName, string vendorDescription)
     {
       Name = vendorName;

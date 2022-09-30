@@ -1,15 +1,15 @@
-// using System.Collections.Generic;
-// using System;
-// using Microsoft.AspNetCore.Mvc;
-// using Bakery.Models;
+using System.Collections.Generic;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using Bakery.Models;
 
-// namespace Bakery.Controllers
-// {
+namespace Bakery.Controllers
+{
 
-//   public class VendorController : Controllers
-//   {
+  public class VendorController : Controllers
+  {
 
 
 
-//   }
-// }
+  }
+}
