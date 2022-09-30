@@ -50,5 +50,18 @@ namespace Bakery.Tests
     Assert.AreEqual(result, newOrder.Id);
   }
 
+    [TestMethod]
+  public void AddOrder_AssociatesOrderWithVendor_OrderList()
+  {
+    string item = "Bread";
+    Order newOrder = new Order(item);
+    List<Order> newList = new List<Order> { newOrder };
+    string name = "Lenny's Bakery";
+    Vendor newVendor = new Vendor(name);
+    newVendor.AddOrder(newOrder);
+    List<Order> result = newVendor.Orders;
+    CollectionAssert.AreEqual(newList, result);
+  }
+
   }
 }
