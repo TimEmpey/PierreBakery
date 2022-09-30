@@ -2,11 +2,11 @@ body {
   text-align: center;
   background-image: url("https://wallpaperaccess.com/full/1892327.jpg");
   background-size: cover;
-  /* background-position: ; */
+  background-position: top 10%;
 }
 
 h1 {
-  color: rgb(55, 72, 203);
+  color: tan;
   font-weight: bold;
   background-color: grey;
   padding-top: 15px;
@@ -22,4 +22,5 @@ h1 {
   margin-right: 35%;
   margin-bottom: 10px;
   box-shadow: 5px 5px grey;
+  background-color: tan;
 }

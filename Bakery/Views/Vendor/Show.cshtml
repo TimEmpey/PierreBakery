@@ -15,10 +15,10 @@
     @foreach (Order order in @Model["orders"])
     {
       <div class="listItem">
-        <li>@order.Item</li>
-          <li style="margin-left:2em">@order.Amount</li>
-          <li style="margin-left:2em">@order.Price</li>
-          <li style="margin-left:2em">@order.Date</li>
+        <p>@order.Item</p>
+          <p style="margin-left:2em">@order.Amount</p>
+          <p style="margin-left:2em">@order.Price</p>
+          <p style="margin-left:2em">@order.Date</p>
       </div>
     }
     </ul>

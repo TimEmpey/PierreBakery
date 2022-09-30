@@ -20,8 +20,8 @@
     @foreach (Vendor vendor in Model)
     {
       <div class="listItem">
-        <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
-        <li style="margin-left:2em">@vendor.Location</li>
+        <p><a href='/vendors/@vendor.Id'>@vendor.Name</a></p>
+        <p style="margin-left:2em">@vendor.Location</p>
       </div>
     }
     <h3><a href='/vendors/new'>Add a new vendor</a></h3>
