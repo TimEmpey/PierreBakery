@@ -41,5 +41,14 @@ namespace Bakery.Tests
     Assert.AreNotEqual(orderOne, orderTwo);
   }
 
+    [TestMethod]
+  public void AssignId_AssignAndCheckOrderId_Int()
+  {
+    string item = "Bread";
+    Order newOrder = new Order(item);
+    int result = newOrder.Id;
+    Assert.AreEqual(result, newOrder.Id);
+  }
+
   }
 }
