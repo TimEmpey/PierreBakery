@@ -22,5 +22,16 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
+  [TestMethod]
+  public void VendorName_ReturnsVendorsName_String()
+  {
+    string name = "Lenny's Bakery";
+    Vendor newVendor = new Vendor(name);
+    string nameCheck = newVendor.Name;
+    Assert.AreEqual(nameCheck, name);
+  }
+
+  
+
   }
 }
