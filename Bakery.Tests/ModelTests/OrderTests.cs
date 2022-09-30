@@ -16,9 +16,9 @@ namespace Bakery.Tests
     }
 
   [TestMethod]
-  public void OrderConstructor_TestIntanceOfOrder_Order()
+  public void OrderConstructor_TestInstanceOfOrder_Order()
   {
-    Order newOrder = new Order("testing");
+    Order newOrder = new Order("item", "amount", "price", "date");
     Assert.AreEqual(typeof(Order), newOrder.GetType());
   }
 
@@ -26,7 +26,10 @@ namespace Bakery.Tests
   public void OrderName_ReturnsOrdersName_String()
   {
     string Item = "Bread";
-    Order newOrder = new Order(Item);
+    string Amount = "10 loafs";
+    string Price = "$50";
+    string Date = "Sep 12, 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
     string ItemCheck = newOrder.Item;
     Assert.AreEqual(ItemCheck, Item);
   }
@@ -35,17 +38,26 @@ namespace Bakery.Tests
   public void OrderConstructor_SaveMultipleOrdersAndReturnOne_String()
   {
     string itemOne = "Bread";
+    string amountOne = "10 loafs";
+    string priceOne = "$50";
+    string dateOne = "Sep 12, 2022";
     String itemTwo = "Croissants";
-    Order orderOne = new Order(itemOne);
-    Order orderTwo = new Order (itemTwo);
+    string amountTwo = "5 bundles";
+    string priceTwo = "$30";
+    string dateTwo = "Oct 5, 2022";
+    Order orderOne = new Order(itemOne, amountOne, priceOne, dateOne);
+    Order orderTwo = new Order (itemTwo, amountTwo, priceTwo, dateTwo);
     Assert.AreNotEqual(orderOne, orderTwo);
   }
 
     [TestMethod]
   public void AssignId_AssignAndCheckOrderId_Int()
   {
-    string item = "Bread";
-    Order newOrder = new Order(item);
+    string Item = "Bread";
+    string Amount = "10 loafs";
+    string Price = "$50";
+    string Date = "Sep 12, 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
     int result = newOrder.Id;
     Assert.AreEqual(result, newOrder.Id);
   }
@@ -53,8 +65,11 @@ namespace Bakery.Tests
     [TestMethod]
   public void AddOrder_AssociatesOrderWithVendor_OrderList()
   {
-    string item = "Bread";
-    Order newOrder = new Order(item);
+    string Item = "Bread";
+    string Amount = "10 loafs";
+    string Price = "$50";
+    string Date = "Sep 12, 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
     List<Order> newList = new List<Order> { newOrder };
     string name = "Lenny's Bakery";
     string description = "Corner of 24th and Jefferson";

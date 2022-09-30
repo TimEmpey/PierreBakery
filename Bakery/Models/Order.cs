@@ -13,12 +13,12 @@ namespace Bakery.Models
     public int Id { get; }
 
 
-    public Order(string orderItem)
+    public Order(string orderItem, string orderAmount, string orderPrice, string orderDate)
     {
       Item = orderItem;
       Amount = orderAmount;
       Price = orderPrice;
-      Date = orderPrice;
+      Date = orderDate;
       _instances.Add(this);
       Id = _instances.Count;
     }
