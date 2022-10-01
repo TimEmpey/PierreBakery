@@ -4,22 +4,26 @@
     <meta charset="utf-8">
     <title>Vendor List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
   </head>
   <body>
     <h1>Pierre Bakery - New Order</h1>
-    <form action="/vendors/@Model.Id/orders" method="post">
-      <label for="orderItem">Order Item:</label>
-      <input for="orderItem" name="orderItem" type="text">
-      <label for="orderAmount">Order Amount:</label>
-      <input for="orderAmount" name="orderAmount" type="text">
-      <label for="orderPrice">Order Price:</label>
-      <input for="orderPrice" name="orderPrice" type="text">
-      <label for="orderDate">Order Date:</label>
-      <input for="orderDate" name="orderDate" type="text">
-      <button type="submit">Add</button>
-    </form>
-    <h3><a href='/vendors'>View vendors</a></h3>
-    <p><a href="/">Back home</a></p>
+    <div class="form">
+      <div class="inputs">
+        <form action="/vendors/@Model.Id/orders" method="post">
+          <input for="orderItem" name="orderItem" type="text" placeholder="Item">
+          <input for="orderAmount" name="orderAmount" type="text" placeholder="Amount">
+          <input for="orderPrice" name="orderPrice" type="text" placeholder="Price">
+          <input for="orderDate" name="orderDate" type="text" placeholder="Date">
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+      <a href='/vendors'>
+        <button class="btn btn-primary">View Vendors</button>
+      </a>
+      <a href="/">
+        <button class="btn btn-secondary">Back home</button>
+      </a>
+    </div>
   </body>
 </html>

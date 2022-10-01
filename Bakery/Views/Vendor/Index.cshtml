@@ -4,27 +4,31 @@
     <meta charset="utf-8">
     <title>Vendor List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
   </head>
   <body> 
     @using Bakery.Models;
 
     <h1>Pierre Bakery - Vendor List</h1>
 
-
-    @if (@Model.Count == 0)
-    {
-        <h3>No vendors have been added yet!</h3>
-    } 
-
-    @foreach (Vendor vendor in Model)
-    {
-      <div class="listItem">
-        <p><a href='/vendors/@vendor.Id'>@vendor.Name</a></p>
-        <p style="margin-left:2em">@vendor.Location</p>
-      </div>
-    }
-    <h3><a href='/vendors/new'>Add a new vendor</a></h3>
-    <p><a href="/">Back home</a></p>
+    <div class="form">
+      @if (@Model.Count == 0)
+      {
+          <h3>No vendors have been added yet!</h3>
+      } 
+      @foreach (Vendor vendor in Model)
+      {
+        <div class="listItem">
+          <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
+          <li style="margin-left:2em">@vendor.Location</li>
+        </div>
+      }
+      <a href='/vendors/new'>
+        <button class="btn btn-success">Add Vendor</button>
+      </a>
+      <a href="/">
+        <button class="btn btn-secondary">Back home</button>
+      </a>
+    </div>
   </body>
 </html>

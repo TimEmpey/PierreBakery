@@ -4,25 +4,33 @@
     <meta charset="utf-8">
     <title>Vendor List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
   </head>
   <body>
     @using Bakery.Models;
     
     <h1>Pierre Bakery - Order List</h1>
 
-    <ul>
-    @foreach (Order order in @Model["orders"])
-    {
-      <div class="listItem">
-        <p>@order.Item</p>
-          <p style="margin-left:2em">@order.Amount</p>
-          <p style="margin-left:2em">@order.Price</p>
-          <p style="margin-left:2em">@order.Date</p>
-      </div>
-    }
-    </ul>
-    <h3><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h3>
-    <h3><a href='/vendors'>View venders</a></h3>
+    <div class="form">
+      <ul>
+      @foreach (Order order in @Model["orders"])
+      {
+        <div class="listItem">
+          <p>@order.Item</p>
+            <li style="margin-left:2em">@order.Amount</li>
+            <li style="margin-left:2em">@order.Price</li>
+            <li style="margin-left:2em">@order.Date</li>
+        </div>
+      }
+      </ul>
+      <a href='/vendors/@Model["vendor"].Id/orders/new'>
+        <button class="btn btn-success">Add Order</button>
+      <a href='/vendors'>
+        <button class="btn btn-primary">View venders</button>
+      </a>
+      <a href="/">
+        <button class="btn btn-secondary">Back home</button>
+      </a>
+    </div>
   </body>
 </html>

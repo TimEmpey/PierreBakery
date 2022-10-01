@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  background-image: url("https://wallpaperaccess.com/full/1892327.jpg");
+  background-size: cover;
+  background-position: top 10%;
+}
+
+h1 {
+  color: tan;
+  font-weight: bold;
+  background-color:  rgb(71, 71, 71);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-shadow: 2px 2px white;
+}
+
+.listItem {
+  border: solid black 2px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px grey;
+  background-color: tan;
+}
+
+.form {
+  background-color: white;
+  border: solid black 4px;
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-left: 30%;
+  width:40%;
+}
+
+.inputs {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  box-shadow: grey 2px 2px;
+}
+
+a{
+  color: black;
+}
